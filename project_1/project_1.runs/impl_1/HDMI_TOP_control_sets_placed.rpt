@@ -1,0 +1,84 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Sun Aug  9 10:25:56 2020
+| Host         : LAPTOP-L3EDLMAL running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file HDMI_TOP_control_sets_placed.rpt
+| Design       : HDMI_TOP
+| Device       : xc7s15
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    15 |
+| Unused register locations in slices containing registers |    45 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|      4 |            1 |
+|      8 |            2 |
+|     10 |            1 |
+|     12 |            5 |
+|    16+ |            5 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             122 |           52 |
+| No           | No                    | Yes                    |               6 |            2 |
+| No           | Yes                   | No                     |              88 |           33 |
+| Yes          | No                    | No                     |              56 |           25 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              43 |           15 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+----------------------------------+-------------------------------------------------------------------------------+------------------+----------------+
+|      Clock Signal     |           Enable Signal          |                                Set/Reset Signal                               | Slice Load Count | Bel Load Count |
++-----------------------+----------------------------------+-------------------------------------------------------------------------------+------------------+----------------+
+|  clk_10/inst/clk_out1 |                                  | rgb2dvi/U0/ClockGenInternal.ClockGenX/in0                                     |                1 |              2 |
+|  clk_10/inst/clk_out1 |                                  | rgb2dvi/U0/ClockGenInternal.ClockGenX/LockLostReset/SyncAsyncx/oSyncStages[1] |                1 |              4 |
+|  enemy0/E[0]          |                                  |                                                                               |                4 |              8 |
+|  clk_10/inst/clk_out1 | enemy0/ENEMY_Y                   |                                                                               |                6 |              8 |
+|  clk_10/inst/clk_out1 |                                  | rgb2dvi/U0/DataEncoders[0].DataEncoder/pDataOutRaw[9]_i_1__1_n_0              |                5 |             10 |
+|  clk_10/inst/clk_out1 | enemy0/moveflag                  | enemy0/ENEMY_X                                                                |                7 |             12 |
+|  clk_10/inst/clk_out1 | board0/board1_Y[0]_i_1_n_0       |                                                                               |                8 |             12 |
+|  clk_10/inst/clk_out1 | Driver_HDMI0/Set_X0_carry__0_n_2 |                                                                               |                4 |             12 |
+|  clk_10/inst/clk_out1 | Driver_HDMI0/Set_Y0_carry__0_n_2 |                                                                               |                4 |             12 |
+|  clk_10/inst/clk_out1 | Driver_HDMI0/VSync_Cnt0          |                                                                               |                3 |             12 |
+|  clk_10/inst/clk_out1 |                                  | key0/count2[0]_i_1_n_0                                                        |                6 |             23 |
+|  clk_10/inst/clk_out1 |                                  | key0/count1[0]_i_1_n_0                                                        |                6 |             23 |
+|  clk_10/inst/clk_out1 | fail0/CRASH_reg_0                | enemy0/count[31]_i_1_n_0                                                      |                8 |             31 |
+|  clk_10/inst/clk_out1 |                                  | rgb2dvi/U0/DataEncoders[0].DataEncoder/SR[0]                                  |               16 |             32 |
+|  clk_10/inst/clk_out1 |                                  |                                                                               |               48 |            114 |
++-----------------------+----------------------------------+-------------------------------------------------------------------------------+------------------+----------------+
+
+

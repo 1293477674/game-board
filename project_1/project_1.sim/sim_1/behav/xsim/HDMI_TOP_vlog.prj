@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../final.srcs/sources_1/ip/clk_wiz_0" \
+"../../../../final.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+"../../../../final.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
+"../../../../final.srcs/sources_1/new/BUTTON.v" \
+"../../../../final.srcs/sources_1/new/Driver_HDMI.v" \
+"../../../../final.srcs/sources_1/new/ENEMY.v" \
+"../../../../final.srcs/sources_1/new/PLANE.v" \
+"../../../../final.srcs/sources_1/new/Video_Generator.v" \
+"../../../../final.srcs/sources_1/new/random.v" \
+"../../../../final.srcs/sources_1/new/HDMI_TOP.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
